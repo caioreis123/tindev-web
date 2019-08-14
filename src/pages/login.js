@@ -29,7 +29,7 @@ function Login(props) {
 
 		props.history.push(`/dev/${_id}`)
 		//the react-router-dom automatically includes the history property into the components of each Route (see Route.js)
-		//the push will add a /dev/id number to the url address of the login that we get in the history (http:localhost:3000)
+		//the push will add a /dev/id number to the url address of the login that we get in the history (https://tindev-server.herokuapp.com/)
 	}
 
 	return (

@@ -43,7 +43,7 @@ function List(props) {
 
 	useEffect(
 		() => {
-			const socket = io("http://localhost:3333", {
+			const socket = io("https://tindev-server.herokuapp.com/", {
 				query: { user: props.match.params.id },
 			})
 			//we are writing the ip of our backend to create a websocket connection to it
