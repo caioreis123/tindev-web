@@ -36,7 +36,7 @@ function List(props) {
 	)
 	//the useEffect react hook is a function that receives 2 arguments,
 	//the first is the function that is going to be executed.
-	//the second is the moment of execution. This moment is everytime some variable inside the array is updated.
+	//the second is the moment of execution. This moment is every time some variable inside the array is updated.
 	//If the array is empty the function is going to be executed only once.
 	//In this use case the useEffect is running every time the id in the url changes.
 	//We put another function (loadUsers) inside the arrow function because we wanted to use the async/await feature.
@@ -50,16 +50,6 @@ function List(props) {
 			// and just by doing this the connection is created, we don't even need to use the socket variable.
 			//But we will to send a message.
 			//the second argument of the io method is optional, and represents additional information that can be sent
-
-			socket.emit("some communication title", {
-				messageContent: "hello from the frontend",
-			})
-			//the emit method of the io API sends the object of it's second argument and names this object as the first argument
-			//to listen to it the server must use the on method of the api and be listen to the some communication title.
-
-			socket.on("backendSalut", (message) => {
-				//console.log(message)
-			})
 
 			socket.on("match", (dev) => {
 				setDevMatch(dev)
